@@ -61,10 +61,24 @@ function TogelPage() {
         setHasilPasaran(pasaran.toUpperCase());
 
         // Membuat isi file teks
+        let isiContentDate = new Date().toLocaleDateString("id-ID", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        });
+        let footerIsi;
+        if (berapaDigit >= 1 && berapaDigit <= 4) {
+          footerIsi = `${berapaDigit}D ${pasaran.toUpperCase()} ${isiContentDate}`;
+        } else {
+          footerIsi = `BBFS${berapaDigit} ${pasaran.toUpperCase()} ${isiContentDate}`;
+        }
+        let isiContent = `${footerIsi}`;
         let fileContent = `Prediksi ${pasaran.toUpperCase()} Hari ini\n\nNo\tPrediksi\n`;
         generatedResults.forEach((hasil, index) => {
           fileContent += `${index + 1}\t${hasil}\n`;
         });
+        fileContent += `\n\nPrediksi mata elang ${isiContent} by dcmedia`;
+        fileContent += `\nJangan Lupa Pajaknya https://saweria.co/dwicakra`;
 
         // Membuat file teks dari hasil prediksi
         const currentDate = new Date();

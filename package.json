@@ -1,21 +1,21 @@
 {
-  "name": "dcmedia",
-  "version": "0.1.0",
+  "name": "dcmedia_site",
+  "version": "2.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "bootstrap": "^5.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.0"
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.3.0",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "buildWin": "set \"GENERATE_SOURCEMAP=false\" &&  react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "prediksi togel semua pasaran, prediksi togel macau, prediksi togel sgp sdy hk",
+  "main": "index.js",
+  "repository": "https://github.com/dwicakra/dcmedia",
+  "author": "dwicakramedia,adsb",
+  "license": "MIT"
 }

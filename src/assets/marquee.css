@@ -1,0 +1,25 @@
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee {
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: marqueeAnimation 20s linear infinite;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
